@@ -1,0 +1,12 @@
+<p>car works!</p>
+<div *ngFor="let car of myCars">
+    {{car.color}}
+    {{car.model}}<button (click)="delCar(car._id)"> delete</button>
+    </div>
+     
+    <hr>
+    <form #myform="ngForm">
+        Color:<input name="color" ngModel/><br>
+        Model: <input name="model" type="number" ngModel/><br>
+        <button (click)="addCar(myform)">Add</button>
+    </form>
